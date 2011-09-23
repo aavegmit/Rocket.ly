@@ -1,0 +1,34 @@
+---
+layout: default
+id: blog-archives
+title: Blog Archives
+published: 2009-01-01
+subtitle: Archives
+feed: /blog/atom.xml
+keywords: social networks media
+---
+<ul id='navigation'>
+  <li><a href="/">Home</a></li>
+  <li><a href='/blog/atom.xml'><img src='/images/feed-icon-14x14.png'>&nbsp;Feed</a></li>
+</ul>
+<h1>Archives</h1>
+<p>This is the complete archive of posts for this blog, most recent first.</p>
+<div class="posts">
+  <!-- <% site.content.blog.posts.pages.select(&:published?).sort_by(&:published).reverse.each do |post| %>-->
+{{#site}} 
+ {{#blog_posts}}
+ 
+  <div class="post">
+    <h2><a href='{{ url }}'>{{ title }}</a></h2>
+    <p class='byline'>
+      <span class='author'>{{ author }}</span>
+      <span class='published'>{{ published }}</span>
+    </p>
+    <div class="excerpt">
+      {{{ excerpt }}} 
+      <p><a class="title" href="{{ url }}">Read more ...</a></p>
+    </div>
+  </div>
+{{/blog_posts}}
+{{/site}}
+</div>

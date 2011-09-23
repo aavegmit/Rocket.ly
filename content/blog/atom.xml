@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+ 
+ <title>Rocket.ly</title>
+ <link href="http://www.rocket.ly/blog/atom.xml" rel="self"/>
+ <link href="http://www.rocket.ly/blog/"/>
+ <updated><%= DateTime.now.strftime %></updated>
+ <id>http://rocket.ly/</id>
+ <author>
+   <name>Dan Yoder</name>
+   <email>dan@zeraweb.com</email>
+ </author>
+ 
+ <!--<% site.content.blog.posts.pages.select(&:published?).sort_by(&:published).
+  reverse.each do |post| %>-->
+  {{#site}}
+  {#blog_posts}}
+  <entry>
+    <title>{{ title }}</title>
+    <link href="{{ url }}"/>
+    <updated>{{ published }}T00:00:00-04:00</updated>
+    <id>{{ identifier }}</id>
+    <content type="html"><![CDATA[>{{ content }}]]></content>
+  </entry>
+ {{/blog_posts}}
+ {{/site}}
+ 
+</feed>

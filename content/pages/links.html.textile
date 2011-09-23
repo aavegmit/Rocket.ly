@@ -1,5 +1,4 @@
 ---
-layout : default
 url: /blog/posts/top-ten-reasons-you-should-quit-facebook.html.textile
 ---
 

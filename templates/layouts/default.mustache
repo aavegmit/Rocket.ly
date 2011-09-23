@@ -4,27 +4,29 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
   <head>
      <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-     <title>rocket.ly: {{title}}</title>
-     <meta name="author" content="Dan Yoder" />
+     <title>rocket.ly: {{ title }}</title>
+     <meta name="author" content="nratan" />
 
      <link rel="start" href="/" />
-
+	
   	{{#keywords}}
   	  <meta name="keywords" content="{{keywords}}">
   	{{/keywords}}
 	
+	
+	
   	{{#feed}}
     	<link rel="alternate" type="application/atom+xml" 
-    	  href="{{feed}}" title="Atom feed" />
+    	  href="{{ feed }}" title="Atom feed" />
   	{{/feed}}
-
+	
      <!-- Homepage CSS -->
      <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.1.1/build/cssreset/reset-min.css">
      <link rel="stylesheet" href="/css/screen.css" type="text/css" />
      
      <script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js'></script>
      <script type='text/javascript' src='/javascript/site.js'></script>
-     {{> google-analytics }}
+     {{>google-analytics}}
      
   </head>
 

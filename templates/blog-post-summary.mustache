@@ -1,0 +1,17 @@
+{{#site}}
+{{#blog_posts}}
+
+  <div class="post">
+    <h2><a href='{{ url }}'>{{ title }}</a></h2>
+    <p class='byline'>
+      <span class='author'>{{ author }}</span>
+      <!--<span class='published'><%= post.published.strftime("%b %d, %Y") %></span>-->
+      <span class='published'> {{ published }}</span>
+    </p>
+    <div class="excerpt">
+      {{{ excerpt }}}<p><a class="title" href="{{ url }}">Read more &#8230;</a></p>
+    </div>
+  </div>
+{{/blog_posts}}
+{{/site}}
+

@@ -1,7 +1,7 @@
 ---
 title: Waves
 published: 2009-01-01
-layout: page
+layout: default
 keywords: ruby waves open-source frameworks web applications architecture
 ---
 h2. What Is Waves?

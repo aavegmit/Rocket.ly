@@ -1,0 +1,32 @@
+---
+layout: default
+---
+
+{{>blog-navigation}}
+
+<div class="post">
+	
+  <h1 class='title'>{{ title }}</h1>
+  
+{{#site}}
+{{^subtitle}}  
+  
+  <!--<% unless page.subtitle.nil? %>-->
+  
+    <h2 class='subtitle'>{{ subtitle }}</h2>
+{{/subtitle}}
+{{/site}}
+  
+  <p class='byline'>
+    <span class="author">{{ author }}</span> 
+    <span class="published">{{ published_strftime("%b %d, %Y") }}</span>
+  </p>
+
+  {{{ yield }}}
+
+  <!--<% if page.published < Date.parse("2010-10-25") %>-->
+  {{#published}}
+   {{>comments-disclaimer}}
+  {{/published}}
+{{>disqus-comment-support}}
+</div>
